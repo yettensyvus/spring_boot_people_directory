@@ -9,4 +9,6 @@ public interface PeopleService {
     List<People> get_all_people();
 
     People save_people(People people);
+    People get_people_by_id(Long id);
+    People update_people(People people);
 }

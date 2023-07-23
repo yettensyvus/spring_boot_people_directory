@@ -26,4 +26,14 @@ public class PeopleServiceImpl implements PeopleService {
     public People save_people(People people) {
         return peopleRepository.save(people);
     }
+
+    @Override
+    public People get_people_by_id(Long id) {
+        return peopleRepository.findById(id).get();
+    }
+
+    @Override
+    public People update_people(People people) {
+        return peopleRepository.save(people);
+    }
 }
