@@ -6,10 +6,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-<div class="container">
-  <div class="row">
+<div class="container font-weight-bold text-monospace">
+  <div class="row m-3">
     <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
-      <h2 class="text-center">Update People</h2>
+      <h2 class="text-center m-3">Update People</h2>
       <div class="card-body">
         <form th:action="@{/peoples/{id} (id=${people.id_people})}" th:object="${people}" method="POST">
           <div class="form-group">
@@ -37,7 +37,7 @@
             <input type="text" name="email" th:field="*{email}" class="form-control" placeholder="Enter People Email"/>
           </div>
           <div class="box-footer">
-            <button type="submit" class="btn btn-primary"> Submit </button>
+            <button type="submit" class="btn btn-info btn-lg btn-block"> Update </button>
           </div>
         </form>
       </div>

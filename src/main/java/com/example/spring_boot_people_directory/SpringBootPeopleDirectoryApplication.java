@@ -10,19 +10,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.time.LocalDate;
 
 @SpringBootApplication
-public class SpringBootPeopleDirectoryApplication implements CommandLineRunner {
+public class SpringBootPeopleDirectoryApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringBootPeopleDirectoryApplication.class, args);
     }
 
-    @Autowired
-    private PeopleRepository peopleRepository;
-    @Override
-    public void run(String... args) throws Exception {
-        /*
-        People p1 = new People("Alex", "Straton", LocalDate.parse("2005-05-05"), "+3734511564", "alex@mail.ru");
-        peopleRepository.save(p1);
-        */
-    }
 }
