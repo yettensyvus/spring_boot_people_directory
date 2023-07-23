@@ -36,4 +36,9 @@ public class PeopleServiceImpl implements PeopleService {
     public People update_people(People people) {
         return peopleRepository.save(people);
     }
+
+    @Override
+    public void delete_people_by_id(Long id) {
+        peopleRepository.deleteById(id);
+    }
 }

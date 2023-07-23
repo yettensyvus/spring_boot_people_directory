@@ -11,4 +11,5 @@ public interface PeopleService {
     People save_people(People people);
     People get_people_by_id(Long id);
     People update_people(People people);
+    void delete_people_by_id(Long id);
 }

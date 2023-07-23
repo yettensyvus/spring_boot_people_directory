@@ -65,4 +65,11 @@ public class PeopleController {
 
         return "redirect:/peoples";
     }
+
+    @GetMapping("/peoples/{id}")
+    public String delete_people(@PathVariable Long id)
+    {
+        peopleService.delete_people_by_id(id);
+        return "redirect:/peoples";
+    }
 }
