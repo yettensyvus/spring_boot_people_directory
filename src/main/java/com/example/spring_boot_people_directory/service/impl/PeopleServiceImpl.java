@@ -21,4 +21,9 @@ public class PeopleServiceImpl implements PeopleService {
     public List<People> get_all_people() {
         return peopleRepository.findAll();
     }
+
+    @Override
+    public People save_people(People people) {
+        return peopleRepository.save(people);
+    }
 }

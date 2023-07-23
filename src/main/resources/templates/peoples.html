@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th = "https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>People Directory</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h2>People's List</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3">
+                <a th:href="@{/peoples/add}" class="btn btn-primary btn-sm mb-3">ADD PEOPLE</a>
+            </div>
+        </div>
+
+        <table class = "table table-striped table-border">
+            <thead class="thead-dark">
+                <tr>
+                    <th>NAME</th>
+                    <th>SURNAME</th>
+                    <th>DATE OF BIRTH</th>
+                    <th>PHONE NUMBER</th>
+                    <th>EMAIL</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each = "people: ${peoples}">
+                    <td th:text="${people.name}"></td>
+                    <td th:text="${people.surname}"></td>
+                    <td th:text="${people.date_of_birth}"></td>
+                    <td th:text="${people.number}"></td>
+                    <td th:text="${people.email}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

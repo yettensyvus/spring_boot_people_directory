@@ -7,4 +7,6 @@ import java.util.List;
 public interface PeopleService {
 
     List<People> get_all_people();
+
+    People save_people(People people);
 }
