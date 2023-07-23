@@ -27,11 +27,11 @@ public class People {
     @Column(name = "people_email", nullable = false)
     private String email;
 
-    public int getId_people() {
+    public Long getId_people() {
         return id_people;
     }
 
-    public void setId_people(int id_people) {
+    public void setId_people(Long id_people) {
         this.id_people = id_people;
     }
 
