@@ -7,8 +7,8 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-<div class="container font-weight-bold text-monospace">
-    <div class="row">
+<div class="container">
+    <div class="row font-weight-bold text-monospace ">
         <div class="col m-3">
             <h2>People's List</h2>
         </div>
@@ -17,19 +17,21 @@
         </div>
     </div>
 
-    <table class="table table-sm table-striped table-light table-bordered text-center">
+    <table class="table table-sm table-striped table-light table-bordered">
         <thead class="thead-dark">
         <tr>
+            <th>ID</th>
             <th>NAME</th>
             <th>SURNAME</th>
             <th>DATE OF BIRTH</th>
             <th>PHONE NUMBER</th>
             <th>EMAIL</th>
-            <th>ACTION</th>
+            <th class="text-center">ACTION</th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="people: ${peoples}">
+        <tr th:each="people: ${peoples}" class="font-weight-normal">
+            <td th:text="${people.id_people}"></td>
             <td th:text="${people.name}"></td>
             <td th:text="${people.surname}"></td>
             <td th:text="${people.date_of_birth}"></td>
